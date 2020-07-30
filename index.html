@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" manifest = "cache.manifest">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width: 600px)"> -->
+        <link rel="stylesheet" href="css/settings.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        
+        <title>Portfolio - Jibril Isimbabi</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <script>
+            window.onload = setTimeout(function(){
+                                            document.getElementById("loader").style.opacity = "0";
+                                            if (document.getElementById("loader").style.opacity = "0"){
+                                                setTimeout(function(){document.getElementById("loader").style.display = "none";}, 1000)
+                                            }
+                                        }, 5000);
+        </script>
+        <style>
+            #about .content {
+                padding: 0 20%;
+                font-size: 110%;
+                background-color: #4447;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Pre-loader Image -->
+        <div id="loader"></div>
+        
+        <!-- Stars -->
+		<canvas id="space_box" style="margin: auto;"></canvas>
+        <div class="container">
+            <!-- Warning for small resolution devices -->
+            <div id="warn">
+                <p>please use a device with higher screen resolution to view this site when you can.
+                    <br>It looks better on a bigger display with higher resolution<br><br>
+                </p>
+                <button onclick="document.getElementById('warn').style.display = 'none'">Ok,I will</button>
+            </div>
+
+            <!-- Nav arrows -->
+            <div class="arrow">
+                <button id="left_arrow" class="nav_arrow" ></button>
+                <button id="right_arrow" class="nav_arrow"></button>
+            </div>
+            
+
+            <!-- 
+                Main- This contains the:
+                HEADER - Landing screen
+                and
+                FOOTER - The contacts page
+            -->
+            <main>
+                
+                            <!-- About section -->
+            <section id="about">
+                    <div class="container">
+                        <div class="btn">
+                            <div class="bio_ribbon">
+                                <div id="id_pic_wrapper">
+                                        <img src="./images/id-l.png" alt="Picture of Name Surname" class="id_pic" style="background-position: left;">
+                                        <img src="./images/id-c.png" alt="Picture of Name Surname" class="id_pic_dwn" style="background-position: center;">
+                                        <img src="./images/id-r.png" alt="Picture of Name Surname" class="id_pic" style="background-position: right;">
+
+                                        <div style="position: absolute; top: 10px; right: 30px; color: black;"><h2>UI/UX DESIGNER</h2></div>
+                                    </div>
+                                    <!-- Abhijit Naskar -->
+                                    <blockquote>&OpenCurlyDoubleQuote;Be the witness of the turning of the human universe, as you yourself become the cause of that very turn - Some Guy&CloseCurlyDoubleQuote;</blockquote>
+                            </div>
+                            <button id="bio_btn" class="info_btn" onclick="infoBtn('bio_btn')">&blk12; Bio-Data</button>
+                            <div class="content">
+                                <h2>Nationality</h2>
+                                <p style="text-indent: 4em;">Nigerian</p>
+                                <p style="text-indent: 6em;">Nasarawa</p>
+                                <h3>Born in</h3>
+                                <p style="text-indent: 4em;">Nigeria</p>
+                                <p style="text-indent: 6em;">Lagos</p>
+                                <h3>Birth date</h3>
+                                <p style="text-indent: 4em;">30-November</p>
+                                <h2>Academic</h2>
+                                <p style="text-indent: 4em;">Al-Qalam University</p>
+                                <p style="text-indent: 6em;">Bsc. Computer Science</p>
+                            </div>
+                            <button id="wrk_btn" class="info_btn" onclick="infoBtn('wrk_btn')">&Gfr; Work Experience</button>
+                            <div class="content">
+                                <div>
+                                    <div id="work_img"></div>
+                                    <h3>Internship 2018</h3>
+                                    <p>Technology and Inovation Group (T.I.G) - Collaboration(Telephony)</p>
+                                    <h3>Jobs with Weco</h3>
+                                    <h3 style="text-indent: 1em;">Express payment Solutions</h3>
+                                    <p>Member of the team that carried out upgrades on the telephony system
+                                        <h5>Project Details</h5>    
+                                        <ul>
+                                            <li style="list-style: dash;">Integrated Cisco IP phones with Panasonic analog phones</li>
+                                            <li>Upgraded the pbx storage</li>
+                                            <li>Installed E1 R2 cards in server and PBX Panel</li>
+                                        </ul>
+                                        </p>
+                                </div>
+
+                            </div>
+                            <button id="projct_btn" class="info_btn" onclick="infoBtn('projct_btn')">&dzigrarr; Projects</button>
+                            <div class="content">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Site tree -->
+                <section id="site_tree">
+                    <div class="container">
+                        <h2>Site tree</h2>
+                        <ul>
+                            <ul class="list_header">BioData
+                                <li class="list_item"><a href="bio_btn_content">Nationality</a></li>
+                                <li class="list_item"><a href="#">D.O.B</a></li>
+                                <li class="list_item"><a href="#">Al-Qalam Universiy</a></li>
+                            </ul>
+        
+                            <ul class="list_header">Work Experience
+                                <li class="list_item"><a href="wrk_btn"><span style="color: rgb(24, 161, 252); font-weight: bolder;">Weco</span> Systems Int'l Ltd.</a></li>
+                                <li class="list_item"><a href="wrk_btn"><span style="color: rgb(253, 159, 36); font-weight: bolder;">Nortrum</span> Lighting Technology Ltd.</a></li>
+                            </ul>
+        
+                            <ul class="list_header">Projects
+                                <li class="list_item"><a href="projct_btn">This website</a></li>
+        
+                            </ul>
+                        </ul>
+                    </div>
+                </section>
+                <!-- END OF SLIDE IN -->
+
+
+
+
+                <div id="header">
+                    <div class="container">
+                    <div id="" class="header_name name">
+                        <!-- <canvas id="canvas" width="auto" height="auto"></canvas> -->
+                        <div id="name_wrapper"><p id="name">Jibril Isimbabi</p></div>
+                        <!-- <p>Guess what? <br>Nad is for Nadira <br>Zif is for Nazif</p> -->
+                        <p>Trying hardest doesn't make you the best, <br> no <br>but it counts</p>
+                    </div>
+                    <div id="nav">
+                        <div>
+                            <div class="global_nav_wrapper"><button class="global_nav" id="nav_one">About</button></div>
+                            <div class="global_nav_wrapper"><button class="global_nav" id="nav_two"><a href="#projct_btn">Projects</a></button></div>
+                            <div class="global_nav_wrapper"><button class="global_nav" id="nav_three"><a href="#contact">Contact</a></button></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            
+                <div id="footer">
+                    <div class="container">
+                        <!-- <canvas id="cdc" width="200px" height="50px" style="border: 1px solid black;"></canvas> -->
+                        <div id="contact" class="grid_2x2">
+                            <div id="icon_wrapper">
+                                <a href="https://www.facebook.com/jibrilisimbabi" class="icon" target="_blank">
+                                    <svg>
+                                        <use xlink:href="#facebook-logo-button"></use>
+                                    </svg>
+                                </a>
+                                
+                                <a href="tel:+234906857144" target="_blank"><button class="icon">
+                                    <svg>
+                                        <use xlink:href="#phone-logo-button" width="250%" height="250%"></use>
+                                    </svg>
+                                </button></a>
+                                
+                                <a href="https://www.twitter.com/itz_jibril" target="_blank"><button class="icon">
+                                    <svg>
+                                        <use xlink:href="#twitter-logo-button"></use>
+                                    </svg>
+                                </button></a>
+                                
+                                <a href="https://www.twitter.com/jibrilisimbabi" target="_blank"><button class="icon">
+                                    <svg>
+                                        <use xlink:href="#linkedin-logo-button"></use>
+                                    </svg>
+                                </button></a>
+                                
+                            </div>
+
+                            <div class="center_aligned">
+                                
+                                <p>You have something to say?</p>
+                                <p>Contact me by mail</p>
+                                <a href="mailto:jibrilisimbabi@gmail.com">
+                                    <div id="mail_btn">here</div>
+                                </a>
+                                <br>
+                                <p>Don't want to mail me?</p> <span class="tiny">(*.*for some bizzare reason*.*)</span>
+                                <br>
+                                <p>Click one of the social media buttons</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ribbon">
+                        Made by Jibril Isimbabi <br>
+                        &copy;JibrilIsimbabi 2018
+                    </div>
+                </div>  
+            </main>
+            
+        
+        </div>
+    
+    
+
+
+    
+
+        <!-- All SVG image codes lie here -->
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="facebook-logo-button" viewBox="0 0 49.652 49.652">
+                <title>facebook-logo-button</title>
+                <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826 C49.652,11.137,38.516,0,24.826,0z M31,25.7h-4.039c0,6.453,0,14.396,0,14.396h-5.985c0,0,0-7.866,0-14.396h-2.845v-5.088h2.845 v-3.291c0-2.357,1.12-6.04,6.04-6.04l4.435,0.017v4.939c0,0-2.695,0-3.219,0c-0.524,0-1.269,0.262-1.269,1.386v2.99h4.56L31,25.7z "/>
+            </symbol>
+            <symbol id="twitter-logo-button" viewBox="0 0 49.652 49.652">
+                <title>twitter-logo-button</title>
+                <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826 C49.652,11.137,38.516,0,24.826,0z M35.901,19.144c0.011,0.246,0.017,0.494,0.017,0.742c0,7.551-5.746,16.255-16.259,16.255 c-3.227,0-6.231-0.943-8.759-2.565c0.447,0.053,0.902,0.08,1.363,0.08c2.678,0,5.141-0.914,7.097-2.446 c-2.5-0.046-4.611-1.698-5.338-3.969c0.348,0.066,0.707,0.103,1.074,0.103c0.521,0,1.027-0.068,1.506-0.199 c-2.614-0.524-4.583-2.833-4.583-5.603c0-0.024,0-0.049,0.001-0.072c0.77,0.427,1.651,0.685,2.587,0.714 c-1.532-1.023-2.541-2.773-2.541-4.755c0-1.048,0.281-2.03,0.773-2.874c2.817,3.458,7.029,5.732,11.777,5.972 c-0.098-0.419-0.147-0.854-0.147-1.303c0-3.155,2.558-5.714,5.713-5.714c1.644,0,3.127,0.694,4.171,1.804 c1.303-0.256,2.523-0.73,3.63-1.387c-0.43,1.335-1.333,2.454-2.516,3.162c1.157-0.138,2.261-0.444,3.282-0.899 C37.987,17.334,37.018,18.341,35.901,19.144z"/>
+            </symbol>
+            <symbol id="linkedin-logo-button" viewBox="0 0 49.652 49.652">
+                <title>linkedin-logo-button</title>
+                <path d="M29.35,21.298c-2.125,0-3.074,1.168-3.605,1.988v-1.704h-4.002c0.052,1.128,0,12.041,0,12.041h4.002v-6.727 c0-0.359,0.023-0.72,0.131-0.977c0.29-0.72,0.948-1.465,2.054-1.465c1.448,0,2.027,1.104,2.027,2.724v6.442h4.002h0.001v-6.905 C33.958,23.019,31.983,21.298,29.35,21.298z M25.742,23.328h-0.025c0.008-0.014,0.02-0.027,0.025-0.041V23.328z"/>
+                <rect x="15.523" y="21.582" width="4.002" height="12.041"/>
+                <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826 C49.652,11.137,38.516,0,24.826,0z M37.991,36.055c0,1.056-0.876,1.91-1.959,1.91H13.451c-1.08,0-1.957-0.854-1.957-1.91V13.211 c0-1.055,0.877-1.91,1.957-1.91h22.581c1.082,0,1.959,0.856,1.959,1.91V36.055z"/>
+                <path d="M17.551,15.777c-1.368,0-2.264,0.898-2.264,2.08c0,1.155,0.869,2.08,2.211,2.08h0.026c1.396,0,2.265-0.925,2.265-2.08 C19.762,16.676,18.921,15.777,17.551,15.777z"/>
+            </symbol>
+            <symbol id="phone-logo-button" viewBox="0 0 49.652 49.652">
+                <title>phone-logo-button</title>
+                <desc/>
+                <defs/>
+                <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
+                <g fill="#000000" id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
+                <g id="phone" transform="translate(85.000000, 126.000000)">
+                <path d="M3.6,7.8 C5,10.6 7.4,12.9 10.2,14.4 L12.4,12.2 C12.7,11.9 13.1,11.8 13.4,12 C14.5,12.4 15.7,12.6 17,12.6 C17.6,12.6 18,13 18,13.6 L18,17 C18,17.6 17.6,18 17,18 C7.6,18 0,10.4 0,1 C0,0.4 0.4,0 1,0 L4.5,0 C5.1,0 5.5,0.4 5.5,1 C5.5,2.2 5.7,3.4 6.1,4.6 C6.2,4.9 6.1,5.3 5.9,5.6 L3.6,7.8 L3.6,7.8 Z" id="Shape"/>
+                </g>
+                </g>
+                </g>
+            </symbol>
+        </svg>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/stars.js"></script>
+</body>
+</html>

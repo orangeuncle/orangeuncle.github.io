@@ -1,0 +1,62 @@
+img {
+    width: 30%;
+    height: 30%;
+}
+#header .name {
+    display: block;
+}
+#about blockquote {
+    font-size: 1rem;
+    text-align: left;
+    max-width: 25em;
+    max-height: 25em;
+    color: rgb(116, 116, 116);
+    shape-outside: polygon(0% 100%, 0% 0%, 100% 0%, 80% 100%);
+    /* clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 80% 100%); */
+}
+.bio_ribbon > div {
+    margin: auto;
+    width: 80%;
+}
+
+@media screen and (max-width: 400px) {
+    img {
+        width: 20%;
+        height: 20%;
+    }
+    body .container {
+        display: block;
+    }
+    #canvas {
+        margin-top: 20%;
+    }
+    #header p {
+        margin-top: -10%;
+    }
+    .global_nav_wrapper {
+        float: none;
+        display: block;
+        margin: 0;
+    }
+    .global_nav_wrapper:nth-child(1) {
+        transform: rotate();
+    }
+    .global_nav_wrapper:nth-child(2) {
+        margin: 0;
+        transform: rotate(5deg);
+    }
+    .global_nav_wrapper:nth-child(3) {
+        transform: rotate(-2deg);
+    }
+    .global_nav_wrapper:hover {
+        transform: rotate(0deg);
+    }
+    .global_nav_wrapper:hover .global_nav {
+        transform: rotateX(0deg);
+    }
+
+
+    #warn {
+        display: block;
+    }
+}

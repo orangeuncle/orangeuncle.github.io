@@ -1,0 +1,22 @@
+::-webkit-scrollbar-thumb {
+    background-color: firebrick;
+}
+
+::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+}
+ 
+::selection{
+    background-color:bisque;
+    color: firebrick;
+}
+-webkit-::selection{
+    background-color:bisque;
+    color: firebrick;
+}
+  
+::-moz-selection{
+    background-color:bisque;
+    color:firebrick;
+}

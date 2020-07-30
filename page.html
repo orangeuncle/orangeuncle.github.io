@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #box {
+            background-color: black;
+            width: 30%;
+            height: 100px;
+            border: 10px solid red;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="fade()" id="box" ></div>
+    <div class="quote">1Trying hardest doesn't make you the best, <br> no <br>but it counts</div>
+    <div class="quote">2Trying hardest doesn't make you the best, <br> no <br>but it counts</div>
+    <div class="quote">3Trying hardest doesn't make you the best, <br> no <br>but it counts</div>
+    <div class="quote">4Trying hardest doesn't make you the best, <br> no <br>but it counts</div>
+    <div class="quote">5Trying hardest doesn't make you the best, <br> no <br>but it counts</div>
+    <div class="quote">6Trying hardest doesn't make you the best, <br> no <br>but it counts</div>
+    
+
+
+
+    <script>
+        var box = document.getElementById("box");
+        var quote = document.getElementsByClassName("quote");
+        function fade(){
+            if (box.style.opacity > 0){
+                box.style.opacity = 0;
+            }
+            else {
+                box.style.opacity = 1;
+            }
+            if (box.style.opacity = "0"){
+                setTimeout(function(){box.style.display = "none";}, 1000);
+            }
+        }
+        // for (var i = 0; i <= quote.length-1; i++) {
+        //     quote[i].style.display = "none";
+        // }
+        // function qt(){
+        //     setTimeout(qt, 3000);
+        //     var i = 0;
+        //     while (i <= quote.length-1) {
+        //         setInterval(2000);
+        //         quote[i].style.display = "none";
+        //         i++;
+        //         box.innerHTML = quote[i].innerHTML;
+        //         quote[i].style.display = "block";
+        //         console.log(box.innerHTML);
+        //     }
+        // }
+        // qt();
+    </script>
+</body>
+</html>

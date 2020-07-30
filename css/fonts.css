@@ -1,0 +1,12 @@
+@font-face {
+    font-family: FiraMono;
+    src: url('../assets/fonts/FiraMono-Regular.tff') format('truetype');
+}
+@font-face {
+    font-family: Megrim;
+    src: url('../assets/fonts/Megrim.tff') format('truetype');
+}
+@font-face {
+    font-family: Amatic SC;
+    src: url('../assets/fonts/AmaticSC-Regular.tff') format('truetype');
+}
