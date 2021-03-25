@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 90%;
+      height: 200px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+	  overflow: hidden;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+	.container {
+		width: 80%;
+		height: 300px;
+		margin: auto;
+	}
+	.grid {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-gap: 8px;
+	}
+	.grid-item {
+		width: 100%;
+		padding-top: 100%;
+		border: 1px solid black;
+		background-color: red;
+	}
+
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div id="bg_screens" class="container">
+	<div class="grid">
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+
+		<script>
+			a = document.getElementsByClassName('grid-item');
+			grid = document.getElementsByClassName('grid');
+			for(i=0; i<a.length;i++){
+				a.height = a.width + 'px';
+			}
+
+		</script>
+	</div>
+  </div>
+
+
+
+  <div id="sm_screens" class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/i1.png"></div>
+      <div class="swiper-slide"><img src="images/i2.png"></div>
+      <div class="swiper-slide"><img src="images/i3.png"></div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 8,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+
+	<script>
+		var big = document.getElementById('bg_screens');
+		var small = document.getElementById('sm_screens');
+		
+		if (screen.width > 480) {
+			small.style.display = "none";
+		}
+		else{
+			big.style.display = "none";
+		}
+		window.onresize = function(){
+			console.log("resize");
+			if (screen.width > 480) {
+				big.style.display = "block"
+				small.style.display = "none";
+			}
+			else{
+				big.style.display = "none";
+				small.style.display = "block";
+			}
+			console.log("resize");
+		}
+	</script>
+
+
+</body>
+
+</html>
